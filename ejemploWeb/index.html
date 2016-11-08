@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coffee Script Example</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+</head>
+<body>
+<h1>Coffee Script Example</h1>
+<div class="container">
+    <div class="part">
+        <a class="btn green assignedNumber">Assigned Number</a>
+        <div class="comment">$('.assignedNumber').click -><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;alert "Assigned Number is #{setNumber}"</div>
+    </div>
+    <div class="part">
+        <a class="btn green assignedNumberText">Assigned Number Text</a>
+        <div class="comment">$('.assignedNumberText').click -><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;alert "Assigned Number is #{setNumber}"</div>
+    </div>
+    <div class="part">
+        <a class="btn green assignedNumberMulti">Multiline Assigned Number</a>
+        <div class="comment">$('.assignedNumberMulti').click -><br />
+        	&nbsp;&nbsp;&nbsp;&nbsp;alert "Assigned Number is #{setNumber} <br />
+which is a value set in the <br />
+main.coffee file"</div>
+    </div>
+    
+    <br class="clear"/>
+    
+    <div class="part">
+        <a class="btn green biggerThan50">Condition</a>
+        <div class="comment">$('.biggerThan50').click -><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;biggerThan50 = if setNumber > 50 then 'Yes' else 'No'<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;alert biggerThan50</div>
+    </div>
+    <div class="part">
+        <a class="btn green switchRange">Switch Range</a>
+        <div class="comment">$('.switchRange').click -><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;switch biggerThan50<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;when 41 then alert 'Snake'<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;when 42 then alert 'Dog'<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;when 43 then alert 'Cat'<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else alert 'No animal present'</div>
+    </div>
+    <div class="part">
+        <a class="btn green tryCatchFinally">Try / Catch / Finally</a>
+        <div class="comment">$('.tryCatchFinally').click -><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;tmpvar = setNumber<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;try<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setNumber += 5<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert setNumber<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;catch error<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert error<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;finally<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setNumber = tmpvar</div>
+    </div>
+    
+    <br class="clear"/>
+    
+    <div class="part">
+        <a class="btn green divideByTwo">Function</a>
+        <div class="comment">$('.divideByTwo').click -><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;alert divideByTwo(setNumber)<br /><br />
+			# Functions:<br />
+			divideByTwo = (x) -> x / 2</div>
+    </div>
+    
+    <div class="part">
+        <a class="btn green arrayExample">Array</a>
+        <div class="comment">$('.arrayExample').click -><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;alert list<br /><br />
+			# Arrays:<br />
+			list = [1, 2, 3, 4, 5]</div>
+    </div>
+    
+    <div class="part">
+        <a class="btn green objectExample">Object</a>
+        <div class="comment">$('.objectExample').click -><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;alert "Mums name is #{family.mum.name} whos age is #{family.mum.age}"<br /><br />
+			# Objects:<br />
+            family =<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;mum:<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name: "Jane"<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;age: 34<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;dad:<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name: "Jon"<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;age: 37<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;son:<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name: "Mark"<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;age: 12</div>
+    </div>
+    
+    <br class="clear"/>
+    
+    <div class="part">
+        <a class="btn green loopExample">Loop</a>
+        <div class="comment">$('.loopExample').click -><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;totalval = 0<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;totalval += value for value in list when value isnt 3<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;alert totalval<br /><br />
+			# Arrays:<br />
+			list = [1, 2, 3, 4, 5]</div>
+    </div>
+    
+    <div class="part">
+        <a class="btn green slicingExample">Slicing</a>
+        <div class="comment">$('.slicingExample').click -><br />
+			 &nbsp;&nbsp;&nbsp;&nbsp;alert list[1..3]<br /><br />
+			# Arrays:<br />
+			list = [1, 2, 3, 4, 5]</div>
+    </div>
+    
+    <div class="part">
+        <a class="btn green splicingExample">Splicing</a>
+        <div class="comment">$('.splicingExample').click -><br />
+			 &nbsp;&nbsp;&nbsp;&nbsp;alert list[3..]<br /><br />
+			# Arrays:<br />
+			list = [1, 2, 3, 4, 5]</div>
+    </div>
+    
+    <br class="clear"/>
+    
+    <div class="part">
+        <a class="btn green splatExample">Splats</a>
+        <div class="comment">$('.loopExample').click -><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;totalval = 0<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;totalval += value for value in list when value isnt 3<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;alert totalval<br /><br />
+			# Arrays:<br />
+			list = [1, 2, 3, 4, 5]</div>
+    </div>
+    
+    <div class="part">
+        <a class="btn green classesExample">Classes, Inheritance, and Super</a>
+        <div class="comment">$('.classesExample').click -><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;adam.move()<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;mark.move()<br /><br />
+			# Classes<br />
+            class Step<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;constructor: (@name) -><br />
+                &nbsp;&nbsp;&nbsp;&nbsp;move: (meters) -><br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert "Moving " + @name + " #{meters} steps"<br /><br />
+            class SmallSteps extends Step<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;move: -><br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super 5<br /><br />
+            class LargeSteps extends Step<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;move: -><br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super 45<br /><br />
+            adam = new SmallSteps "Adam"<br />
+            mark = new LargeSteps "Mark"</div>
+    </div>
+    
+</div>
+</body>
+</html>

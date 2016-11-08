@@ -1,4 +1,4 @@
-# Contributed by Jason Huggins
+
 
 http = require 'http'
 
