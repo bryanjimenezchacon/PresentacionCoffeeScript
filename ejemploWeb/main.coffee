@@ -1,7 +1,3 @@
-###
-GLYNROB COFFEE SCRIPT EXAMPLE
-###
-
 # Assignment:
 setNumber   = 42
 
